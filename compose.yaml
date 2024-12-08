@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - ENVIRONMENT=DSV
+      - FLASK_APP=amigosecreto/app.py
+      - PYTHONDONTWRITEBYTECODE=1
+    volumes:
+      - ./amigosecreto:/app/amigosecreto

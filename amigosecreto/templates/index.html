@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container text-center">
+        {% for i in range(12) %}
+            <div class="row">
+                Row {{ i }}
+                {% for j in range(i+1) %}
+                    <div class="col">
+                        Col {{ j }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>  
+{% endblock %}
